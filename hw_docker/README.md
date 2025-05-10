@@ -20,7 +20,6 @@ https://hub.docker.com/repository/docker/aykapranov/custom-nginx/tags/1.0.0/sha2
 
 ![img_3.png](img_3.png)
 
-
 # Задание 5
 
 Путь по умолчанию для файла Compose — compose.yaml
