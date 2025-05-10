@@ -5,7 +5,6 @@ https://hub.docker.com/repository/docker/aykapranov/custom-nginx/tags/1.0.0/sha2
 ![img.png](img.png)
 
 
-
 # Задание 3
 - Когда мы жмем Ctrl-C, то посылаешь сигнал SIGINT и основной процесс внутри контейнера завершает работу.
 - После редактирования default.conf, nginx слушает 81, но наружу он не проброшен, поэтому curl http://127.0.0.1:8080 не работает
