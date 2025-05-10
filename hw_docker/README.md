@@ -4,7 +4,6 @@ https://hub.docker.com/repository/docker/aykapranov/custom-nginx/tags/1.0.0/sha2
 # Задание 2
 ![img.png](img.png)
 
-
 # Задание 3
 
 - Когда мы жмем Ctrl-C, то посылаешь сигнал SIGINT и основной процесс внутри контейнера завершает работу.
