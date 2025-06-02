@@ -15,18 +15,20 @@ locals {
     }
   ]
 
-  storage_instance = {
-    name = yandex_compute_instance.storage.name
-    ip   = yandex_compute_instance.storage.network_interface[0].nat_ip_address
-    fqdn = yandex_compute_instance.storage.fqdn
-  }
+  storage_instances = [
+    for vm in [yandex_compute_instance.storage] : {
+      name = vm.name
+      ip   = vm.network_interface[0].nat_ip_address
+      fqdn = vm.fqdn
+    }
+  ]
 }
 
 resource "local_file" "ansible_inventory" {
   content = templatefile("${path.module}/hosts.tftpl", {
     web_instances     = local.web_instances
     db_instances      = local.db_instances
-    storage_instance  = local.storage_instance
+    storage_instances = local.storage_instances
   })
 
   filename = "${abspath(path.module)}/hosts.ini"
