@@ -14,6 +14,7 @@ https://github.com/aykapranov/shvirtd-example-python
 ![img_2.png](img_2.png)
 
 
+
 # Задание 6
 
 ![img_3.png](img_3.png)
