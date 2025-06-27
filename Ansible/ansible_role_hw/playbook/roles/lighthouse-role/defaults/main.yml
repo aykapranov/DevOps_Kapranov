@@ -1,0 +1,4 @@
+---
+lighthouse_root: /opt/lighthouse
+lighthouse_repo: "https://github.com/VKCOM/lighthouse.git"
+lighthouse_web_root: /var/www/html

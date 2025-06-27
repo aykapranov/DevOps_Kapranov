@@ -1,0 +1,57 @@
+---
+- name: Install EPEL repository (for nginx)
+  ansible.builtin.yum:
+    name: epel-release
+    state: present
+
+- name: Install git and nginx
+  ansible.builtin.yum:
+    name:
+      - git
+      - nginx
+    state: present
+
+- name: Enable and start nginx
+  ansible.builtin.service:
+    name: nginx
+    state: started
+    enabled: true
+
+- name: Clone Lighthouse repository
+  ansible.builtin.git:
+    repo: "{{ lighthouse_repo }}"
+    dest: "{{ lighthouse_root }}"
+    version: master
+
+- name: Ensure nginx web root exists
+  ansible.builtin.file:
+    path: "{{ lighthouse_web_root }}"
+    state: directory
+    mode: '0755'
+
+- name: Create symlink to serve Lighthouse
+  ansible.builtin.file:
+    src: "{{ lighthouse_root }}"
+    dest: "{{ lighthouse_web_root }}/lighthouse"
+    state: link
+    force: true
+
+- name: Configure nginx for Lighthouse
+  ansible.builtin.copy:
+    dest: /etc/nginx/conf.d/lighthouse.conf
+    content: |
+      server {
+          listen 80;
+          server_name _;
+          root {{ lighthouse_web_root }}/lighthouse;
+
+          location / {
+              index index.html;
+          }
+
+          location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+              expires max;
+              log_not_found off;
+          }
+      }
+  notify: Restart nginx

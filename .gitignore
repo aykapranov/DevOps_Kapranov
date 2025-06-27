@@ -1,0 +1,30 @@
+/.idea/DevOps_Kapranov.iml
+/.idea
+/.idea/*
+/main.py
+Ansible/ansible1
+Ansible/ansible2
+hw_docker
+hw_docker2
+Terraform
+main.py
+virtd-homeworks-01.md
+Снимок экрана 2025-05-08 в 13.31.41.png
+
+# Секреты и конфиги
+.env
+secrets/
+config/private.yml
+
+# Python и виртуальное окружение
+venv/
+__pycache__/
+*.pyc
+
+# Журналы и временные файлы
+*.log
+*.tmp
+
+# Системные файлы
+.DS_Store
+Thumbs.db
