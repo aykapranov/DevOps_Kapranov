@@ -1,0 +1,26 @@
+- name: Verify Vector download and config deployment
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Check that Vector archive was downloaded
+      ansible.builtin.stat:
+        path: "/tmp/vector.tar.gz"
+      register: archive_stat
+
+    - name: Assert archive exists
+      ansible.builtin.assert:
+        that:
+          - archive_stat.stat.exists
+        fail_msg: "Vector archive was not downloaded to /tmp/vector.tar.gz"
+
+    - name: Check that Vector config exists at /etc/vector/vector.toml
+      ansible.builtin.stat:
+        path: "/etc/vector/vector.toml"
+      register: config_stat
+
+    - name: Assert config file exists
+      ansible.builtin.assert:
+        that:
+          - config_stat.stat.exists
+        fail_msg: "Vector config file not found at /etc/vector/vector.toml"
