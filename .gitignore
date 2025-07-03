@@ -28,3 +28,4 @@ __pycache__/
 # Системные файлы
 .DS_Store
 Thumbs.db
+/Ansible/ansible_role_hw/playbook/roles/vector/meta/.galaxy_install_info
