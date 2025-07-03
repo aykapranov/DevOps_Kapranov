@@ -1,0 +1,9 @@
+- name: Converge
+  hosts: all
+  gather_facts: false
+  become: true
+  become_method: su
+  tasks:
+    - name: Include vector role
+      include_role:
+        name: vector
