@@ -1,0 +1,10 @@
+- name: Use custom my_test module
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Create file using my custom module
+      my_namespace.my_collection.my_test:
+        path: /modules/hello.txt
+        content: "Файл создан из Ansible playbook"

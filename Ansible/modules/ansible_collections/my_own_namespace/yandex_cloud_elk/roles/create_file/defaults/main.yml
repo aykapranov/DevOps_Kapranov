@@ -1,0 +1,3 @@
+---
+path: /modules/ansible_collections/my_own_namespace/hello_from_role.txt
+content: "Модуль"
