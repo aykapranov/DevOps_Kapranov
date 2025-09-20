@@ -33,6 +33,8 @@ PV остаётся в состоянии Released, он отвязан, но н
 
 # Задание 3. StorageClass
 
+[pv-for-sc.yaml](03%2Fpv-for-sc.yaml)
+[sc.yaml](03%2Fsc.yaml)
 
 ![img_5.png](img_5.png)
 
