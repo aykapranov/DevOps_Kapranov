@@ -1,7 +1,7 @@
 # Terraform
 Структура моего пректа
 
-![img.png](Terraform/img/img.png)
+![img.png](Terraform_D%2Fimg%2Fimg.png)
 
 Для настройки backend я создал `.env` файл и прописал туда 
 
@@ -14,9 +14,8 @@ AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXX
 export $(cat .env | xargs)
 terraform init -migrate-state
 ```
-![img_1.png](Terraform/img/img_1.png)
-
-![img_2.png](Terraform/img/img_2.png)
+![img_1.png](Terraform_D%2Fimg%2Fimg_1.png)
+![img_2.png](Terraform_D%2Fimg%2Fimg_2.png)
 
 Я создал бакет через terraform и далее повторно сделал `terraform init` c backend.tf, чтоб мигрировал state.
 
