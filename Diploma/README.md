@@ -344,10 +344,9 @@ deploy успешно прошел
 
 1. Репозиторий с конфигурационными файлами Terraform и готовность продемонстрировать создание всех ресурсов с нуля. https://github.com/aykapranov/diploma_ter
 2. Пример pull request с комментариями созданными atlantis'ом или снимки экрана из Terraform Cloud или вашего CI-CD-terraform pipeline. https://github.com/aykapranov/diploma_ter/actions
-3. Репозиторий с конфигурацией ansible, если был выбран способ создания Kubernetes кластера при помощи ansible.
-4. Репозиторий с Dockerfile тестового приложения и ссылка на собранный docker image.
-5. Репозиторий с конфигурацией Kubernetes кластера.
-6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа.
-7. Все репозитории рекомендуется хранить на одном ресурсе (github, gitlab)
+3. Репозиторий с конфигурацией ansible, если был выбран способ создания Kubernetes кластера при помощи ansible. https://github.com/aykapranov/DevOps_Kapranov/tree/main/Diploma/Ansible
+4. Репозиторий с Dockerfile тестового приложения и ссылка на собранный docker image. https://github.com/aykapranov/NginxDiploma https://hub.docker.com/r/aykapranov/nginx-diploma
+5. Репозиторий с конфигурацией Kubernetes кластера. https://github.com/aykapranov/DevOps_Kapranov/tree/main/Diploma/K8S
+6. Ссылка на тестовое приложение и веб интерфейс Grafana с данными доступа. Я пока удалил все ресурсы, так как мой грант давно был исчерпан. Я приложил скрины и можем согласовать время, чтоб я к нему поднял все инфраструктуру и вы посмотрели 
 
 
