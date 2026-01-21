@@ -1,3 +1,8 @@
+# Доработка 
+Терраформ код CICD pipeline https://github.com/aykapranov/diploma_ter/blob/main/.github/workflows/terraform.yml
+
+
+
 # Terraform
 Структура моего пректа
 
